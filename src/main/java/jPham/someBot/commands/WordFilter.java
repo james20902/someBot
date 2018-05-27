@@ -17,7 +17,7 @@ public class WordFilter extends ListenerAdapter {
 
         System.out.printf("[%s][%s] %#s: %s%n", event.getGuild().getName(), event.getChannel().getName(), event.getAuthor(), event.getMessage().getContentDisplay());
         Message message = event.getMessage();
-        String content = message.getContentRaw();
+        String content = message.getContentStripped();
         MessageChannel channel = event.getChannel();
         if (checkWords(content)){
             message.delete().queue();
