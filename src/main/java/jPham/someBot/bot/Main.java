@@ -15,12 +15,12 @@ import javax.security.auth.login.LoginException;
 
 public class Main extends ListenerAdapter
 {
-
     public static void main(String[] args)
             throws LoginException, RateLimitedException, InterruptedException
     {
         JDA api = new JDABuilder(AccountType.BOT).setToken(Constants.readToken()).buildBlocking();
         api.addEventListener(new WordFilter());
+        Constants.updateFilter();
     }
 
 

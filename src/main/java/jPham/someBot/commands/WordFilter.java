@@ -6,6 +6,7 @@ import net.dv8tion.jda.core.entities.MessageChannel;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
+import java.io.*;
 
 
 public class WordFilter extends ListenerAdapter {
@@ -28,8 +29,10 @@ public class WordFilter extends ListenerAdapter {
             if (content.length() <= 7){
                 channel.sendMessage("usage: !filter <word>").queue();
             } else {
-                addWord(content.substring(6));
+                addWord(content.substring(8));
             }
+        } else if(content.startsWith(Constants.prefix + "unfilter")){
+            removeWord(content.substring(10));
         } else if (checkWords(content)){
             message.delete().queue();
             channel.sendMessage("Hey watch it!").queue();
@@ -37,22 +40,65 @@ public class WordFilter extends ListenerAdapter {
 
     }
     public void addWord(String newWord){
-        for(String i: Constants.nonowords){
-            if (i == newWord){
-                channel.sendMessage("This word already exists within the filter!").queue();
-                break;
+        String newWordConvert = newWord.replaceAll("\\W","").toLowerCase();
+        if (Constants.filter.contains(newWordConvert)){
+            channel.sendMessage("This word already exists within the filter!").queue();
+        } else {
+            BufferedWriter bw = null;
+            try {
+                // APPEND MODE SET HERE
+                bw = new BufferedWriter(new FileWriter("filter.txt", true));
+                bw.newLine();
+                bw.write(newWordConvert);
+                bw.flush();
+                Constants.updateFilter();
+                channel.sendMessage("Word added!").queue();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {                       // always close the file
+                if (bw != null) try {
+                    bw.close();
+                } catch (Exception e) {
+                    // just ignore it
+                }
             }
         }
-        channel.sendMessage("Word added!").queue();
-        Constants.nonowords.add(newWord);
+
+
+    }
+    public void removeWord(String oldWord){
+        String oldWordConvert = oldWord.replaceAll("\\W","").toLowerCase();
+        if (Constants.filter.contains(oldWordConvert)) {
+            try {
+                BufferedReader file = new BufferedReader(new FileReader("filter.txt"));
+                String line;
+                String input = "";
+                while ((line = file.readLine()) != null) {
+                    //System.out.println(line);
+                    if (line.contains(oldWordConvert)) {
+                        line = "";
+                    }
+                    input += line;
+                }
+                FileOutputStream File = new FileOutputStream("filter.txt");
+                File.write(input.getBytes());
+                file.close();
+                File.close();
+                Constants.updateFilter();
+                channel.sendMessage("Word Removed!").queue();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            channel.sendMessage("Word not found...").queue();
+
+        }
     }
 
     public boolean checkWords(String message){
-        String newMessage = message.replaceAll("\\W","");
-        System.out.println("Converted message: " + newMessage);
-
-        for(String i: Constants.nonowords){
-            if (newMessage.toLowerCase().contains(i)){
+        String newWordConvert = message.replaceAll("\\W","").toLowerCase();
+        for(String i: Constants.filter){
+            if (newWordConvert.contains(i)){
                 return true;
             }
         }
