@@ -1,5 +1,6 @@
-package jPham.someBot.commands;
+package jPham.someBot.functions;
 
+import com.jagrosh.jdautilities.command.CommandListener;
 import jPham.someBot.bot.Constants;
 import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.MessageChannel;
@@ -10,7 +11,7 @@ import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import java.io.*;
 
 
-public class WordFilter extends ListenerAdapter {
+public class WordFilter extends ListenerAdapter implements CommandListener {
 
 
     Message message;
@@ -18,7 +19,7 @@ public class WordFilter extends ListenerAdapter {
     MessageChannel channel;
 
     @Override
-    public void onMessageReceived(MessageReceivedEvent event) {
+    public void onNonCommandMessage(MessageReceivedEvent event) {
         if (event.getAuthor().isBot()) return;
 
         System.out.printf("[%s][%s] %#s: %s%n", event.getGuild().getName(), event.getChannel().getName(), event.getAuthor(), event.getMessage().getContentDisplay());
