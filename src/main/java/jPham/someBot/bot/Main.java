@@ -21,7 +21,7 @@ public class Main {
         builder.setOwnerId("181796145926766592");
 
         builder.addCommand(new AddFilter());
-        //builder.addCommand(new RemoveFilter());
+        builder.addCommand(new RemoveFilter());
         builder.setListener(new WordFilter());
 
         CommandClient client = builder.build();

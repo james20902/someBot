@@ -29,34 +29,35 @@ public class RemoveFilter extends Command{
         channel = event.getChannel();
 
         String[] parameterGrab = content.split(" ", 2);
-        String oldWordConvert = parameterGrab[1].replaceAll("\\W","").toLowerCase();
 
-        if (oldWordConvert.isEmpty()){
+        if (parameterGrab.length <= 1){
             channel.sendMessage("Usage: " + Constants.prefix + "unfilter <word>");
-        } else if (Constants.filter.contains(oldWordConvert)) {
-            try {
-                BufferedReader file = new BufferedReader(new FileReader("filter.txt"));
-                String line;
-                String input = "";
-                while ((line = file.readLine()) != null) {
-                    //System.out.println(line);
-                    if (line.equals(oldWordConvert)) {
-                        line = "";
-                    }
-                    input += line;
-                }
-                FileOutputStream File = new FileOutputStream("filter.txt");
-                File.write(input.getBytes());
-                file.close();
-                File.close();
-                Constants.updateFilter();
-                channel.sendMessage("Word Removed!").queue();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         } else {
-            channel.sendMessage("Word not found...").queue();
+            String oldWordConvert = parameterGrab[1].replaceAll("\\W","").toLowerCase();
+            if (Constants.filter.contains(oldWordConvert)) {
+                try {
+                    BufferedReader file = new BufferedReader(new FileReader("filter.txt"));
+                    String line;
+                    String input = "";
+                    while ((line = file.readLine()) != null) {
+                        if (line.equals(oldWordConvert)) {
+                            line = "";
+                        }
+                        input += line + "\n";
+                    }
+                    FileOutputStream File = new FileOutputStream("filter.txt");
+                    File.write(input.getBytes());
+                    file.close();
+                    File.close();
+                    Constants.updateFilter();
+                    channel.sendMessage("Word Removed!").queue();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else {
+                channel.sendMessage("Word not found...").queue();
 
+            }
         }
     }
 }

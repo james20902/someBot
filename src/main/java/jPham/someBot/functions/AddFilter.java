@@ -28,29 +28,31 @@ public class AddFilter extends Command {
         channel = event.getChannel();
 
         String[] parameterGrab = content.split(" ", 2);
-        String newWordConvert = parameterGrab[1].replaceAll("\\W","").toLowerCase();
 
-        if (parameterGrab[1].length() < 1){
+        if (parameterGrab.length <= 1){
             channel.sendMessage("Usage: " + Constants.prefix + "filter <word>").queue();
-        } else if (Constants.filter.contains(newWordConvert)){
-            channel.sendMessage("This word already exists within the filter!").queue();
         } else {
-            BufferedWriter bw = null;
-            try {
-                // APPEND MODE SET HERE
-                bw = new BufferedWriter(new FileWriter("filter.txt", true));
-                bw.newLine();
-                bw.write(newWordConvert);
-                bw.flush();
-                Constants.updateFilter();
-                channel.sendMessage("Word added!").queue();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {                       // always close the file
-                if (bw != null) try {
-                    bw.close();
+            String newWordConvert = parameterGrab[1].replaceAll("\\W", "").toLowerCase();
+            if (Constants.filter.contains(newWordConvert)) {
+                channel.sendMessage("This word already exists within the filter!").queue();
+            } else {
+                BufferedWriter bw = null;
+                try {
+                    // APPEND MODE SET HERE
+                    bw = new BufferedWriter(new FileWriter("filter.txt", true));
+                    bw.newLine();
+                    bw.write(newWordConvert);
+                    bw.flush();
+                    Constants.updateFilter();
+                    channel.sendMessage("Word added!").queue();
                 } catch (Exception e) {
-                    // just ignore it
+                    e.printStackTrace();
+                } finally {                       // always close the file
+                    if (bw != null) try {
+                        bw.close();
+                    } catch (Exception e) {
+                        // just ignore it
+                    }
                 }
             }
         }
