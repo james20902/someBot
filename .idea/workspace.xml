@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66469d29-8eda-419a-8a01-cf1c0fffca11" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/jPham/someBot/functions/WolframAlpha.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/filter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/filter.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/jPham/someBot/bot/Constants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/jPham/someBot/bot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/jPham/someBot/bot/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jPham/someBot/bot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jPham/someBot/bot/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jPham/someBot/functions/AddFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jPham/someBot/functions/AddFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jPham/someBot/functions/RemoveFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jPham/someBot/functions/RemoveFilter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -38,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/bot/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+            <state relative-caret-position="374">
+              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -50,8 +47,20 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/bot/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="204">
+              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WolframAlpha.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/functions/WolframAlpha.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,8 +68,8 @@
       <file leaf-file-name="AddFilter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/functions/AddFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="37" />
+            <state relative-caret-position="391">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -68,8 +77,8 @@
       <file leaf-file-name="RemoveFilter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/functions/RemoveFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+            <state relative-caret-position="850">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
@@ -339,7 +348,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4583259332247" />
+        <entry key="$PROJECT_DIR$" value="4581310123628" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="2499230733" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="2670562215" />
@@ -385,63 +394,6 @@
                   <option value="C:/Program Files/Gradle/gradle-4.7/src/code-quality" />
                   <option value="C:/Program Files/Gradle/gradle-4.7/src/composite-builds" />
                   <option value="C:/Program Files/Gradle/gradle-4.7/src/core" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/core-api" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/dependency-management" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/diagnostics" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/ear" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/ide" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/ide-native" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/ide-play" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/installation-beacon" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/internal-android-performance-testing" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/internal-integ-testing" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/internal-performance-testing" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/internal-testing" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/ivy" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/jacoco" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/javascript" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/jvm-services" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/language-groovy" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/language-java" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/language-jvm" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/language-native" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/language-scala" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/launcher" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/logging" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/maven" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/messaging" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/model-core" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/model-groovy" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/native" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/osgi" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/persistent-cache" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/platform-base" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/platform-jvm" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/platform-native" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/platform-play" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/plugin-development" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/plugin-use" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/plugins" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/process-services" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/publish" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/reporting" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/resources" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/resources-gcs" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/resources-http" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/resources-s3" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/resources-sftp" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/scala" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/signing" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/test-kit" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/testing-base" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/testing-junit-platform" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/testing-jvm" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/testing-native" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/tooling-api" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/tooling-api-builders" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/version-control" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/workers" />
-                  <option value="C:/Program Files/Gradle/gradle-4.7/src/wrapper" />
                   <option value="C:/Program Files/Gradle/gradle-4.7/lib/ant-1.9.9.jar" />
                   <option value="C:/Program Files/Gradle/gradle-4.7/lib/ant-launcher-1.9.9.jar" />
                   <option value="C:/Program Files/Gradle/gradle-4.7/lib/gradle-base-services-4.7.jar" />
@@ -550,15 +502,16 @@
         <option value="$PROJECT_DIR$/src/main/java/jPham/someBot/functions/TestCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/jPham/someBot/functions/WordFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/jPham/someBot/functions/AddFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jPham/someBot/bot/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/jPham/someBot/functions/RemoveFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/jPham/someBot/bot/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jPham/someBot/bot/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jPham/someBot/functions/WolframAlpha.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="373" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="149" />
+    <option name="y" value="215" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -598,6 +551,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jPham" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="someBot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jPham" type="462c0819:PsiDirectoryNode" />
               <item name="someBot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -606,6 +568,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jPham" type="462c0819:PsiDirectoryNode" />
               <item name="someBot" type="462c0819:PsiDirectoryNode" />
               <item name="bot" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -615,6 +578,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jPham" type="462c0819:PsiDirectoryNode" />
               <item name="someBot" type="462c0819:PsiDirectoryNode" />
               <item name="functions" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -622,16 +586,21 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testBot" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WolframAlpha-1.1.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="jPham.someBot.functions" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -718,10 +687,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="149" y="215" width="1400" height="1000" extended-state="0" />
+    <editor active="true" />
     <layout>
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3299435" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32965517" />
       <window_info anchor="right" id="Maven Projects" order="3" />
@@ -729,21 +699,21 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23828125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.44075143" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.3299435" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.3299435" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3299435" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -755,13 +725,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/bot/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/bot/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -966,31 +929,41 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/functions/TestCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/commands/Commands.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/functions/WordFilter.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/bot/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/functions/RemoveFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+        <state relative-caret-position="850">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/functions/AddFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="37" />
+        <state relative-caret-position="391">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/bot/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/bot/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+        <state relative-caret-position="374">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jPham/someBot/functions/WolframAlpha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,11 +1043,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Gradle: com.google.code.findbugs:jsr305:3.0.2</last-edited>
+          <last-edited>WolframAlpha-1.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.17011495" />
               </list>
             </option>
           </splitter-proportions>
