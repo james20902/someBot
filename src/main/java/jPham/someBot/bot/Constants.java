@@ -20,6 +20,15 @@ public class Constants {
         }
         return FILE.nextLine();
     }
+    public static String readWolfram(){
+        try {
+            FILE = new Scanner(new File("token.txt"));
+            FILE.nextLine();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return FILE.nextLine();
+    }
 
     public static String prefix = "!";
     public static ArrayList<String> filter = new ArrayList<>();
