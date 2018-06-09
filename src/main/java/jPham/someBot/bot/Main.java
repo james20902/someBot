@@ -3,8 +3,9 @@ package jPham.someBot.bot;
 import com.jagrosh.jdautilities.command.CommandClient;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 
+
 import jPham.someBot.functions.AddFilter;
-import jPham.someBot.functions.RemoveFilter;
+import jPham.someBot.functions.WolframAlpha;
 import jPham.someBot.functions.WordFilter;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
@@ -22,7 +23,9 @@ public class Main {
 
         builder.addCommand(new AddFilter());
         //builder.addCommand(new RemoveFilter());
+        builder.addCommand(new WolframAlpha());
         builder.setListener(new WordFilter());
+
 
         CommandClient client = builder.build();
 
