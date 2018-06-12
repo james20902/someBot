@@ -30,6 +30,7 @@ public class Main {
         CommandClient client = builder.build();
 
 
+
         JDA api = new JDABuilder(AccountType.BOT).setToken(Constants.readToken()).buildBlocking();
         api.addEventListener(client);
         Constants.updateFilter();

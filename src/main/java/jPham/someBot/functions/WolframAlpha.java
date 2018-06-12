@@ -9,13 +9,20 @@ import com.wolfram.alpha.WAQueryResult;
 import jPham.someBot.bot.Constants;
 import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.MessageChannel;
+import net.dv8tion.jda.core.entities.MessageEmbed;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.net.URL;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
 
 public class WolframAlpha extends Command {
+
+    File result;
+    URL website;
 
     Message message;
     String content;
@@ -58,7 +65,14 @@ public class WolframAlpha extends Command {
                     channel.sendMessage("Query not understood, no results found, please try again").queue();
                     System.out.println("Query was not understood; no results available.");
                 } else {
-                    channel.sendMessage((engine.toURL(query)).replaceFirst("query", "simple")).queue();
+                    result = new File(parameterGrab[1] + ".jpg");
+                    website = new URL((engine.toURL(query)).replaceFirst("query", "simple"));
+                    ReadableByteChannel rbc = Channels.newChannel(website.openStream());
+                    FileOutputStream fos = new FileOutputStream(result);
+                    fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
+                    channel.sendFile(result).queue();
+                    fos.close();
+                    rbc.close();
                 }
             } catch (Exception e) {
                 channel.sendMessage("something went wrong, please try again").queue();
